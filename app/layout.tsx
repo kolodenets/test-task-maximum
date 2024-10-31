@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import 'normalize.css';
-import './global.scss'
+import "normalize.css";
+import "./global.scss";
+import Header from "./ui/header/header";
 
 const tacticSans = localFont({
   src: "./fonts/TacticSans-Reg.woff",
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${tacticSans.variable}`}>
+        <Header />
         {children}
       </body>
     </html>
