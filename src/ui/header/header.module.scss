@@ -1,7 +1,7 @@
 .header {
   height: 108px;
   background-color: #010c13;
-  padding: 20px 0;
+  padding: 20px;
 
   @media screen and (max-width: 768px) {
     height: 54px;
@@ -12,7 +12,6 @@
 .logoContainer {
   display: flex;
   max-width: 1482px;
-  padding: 0 20px;
   margin: 0 auto;
   align-items: center;
   gap: 20px;
