@@ -7,7 +7,17 @@ import Header from "../ui/header/header";
 const tacticSans = localFont({
   src: "../styles/fonts/TacticSans-Reg.woff",
   variable: "--font-tactic-sans",
-  weight: "900",
+  weight: "400",
+});
+const tacticSansMed= localFont({
+  src: "../styles/fonts/TacticSans-Med.woff",
+  variable: "--font-tactic-sans-med",
+  weight: "500",
+});
+const tacticSansBold = localFont({
+  src: "../styles/fonts/TacticSans-Bld.woff",
+  variable: "--font-tactic-sans-bold",
+  weight: "600",
 });
 
 export const metadata: Metadata = {
@@ -22,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${tacticSans.variable}`}>
+      <body className={`${tacticSans.variable} ${tacticSansMed.variable} ${tacticSansBold.variable}`}>
         <Header />
         {children}
       </body>

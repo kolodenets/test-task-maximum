@@ -1,5 +1,4 @@
 import { MainPage } from "../components/MainPage/MainPage";
-import styles from "./page.module.scss";
 
 export default async function Home() {
   const data = await fetch(
@@ -8,12 +7,10 @@ export default async function Home() {
   const cars = await data.json();
 
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <div>
-          <MainPage cars={cars} />
-        </div>
-      </main>
-    </div>
+    <main>
+      <div>
+        <MainPage cars={cars} />
+      </div>
+    </main>
   );
 }

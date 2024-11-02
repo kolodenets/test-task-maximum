@@ -58,7 +58,7 @@ export const MainPage = ({ cars }: { cars: ICard[] }) => {
       <div className={s.wrapper}>
         <div className={s.filtersContentWrapper}>
           <div className={s.filterWrapper}>
-            <span>Бренд</span>
+            <span className={s.filterTitle}>Бренд</span>
             <div className={s.filters}>
               {mock_brands.map((brand) => (
                 <div
@@ -75,7 +75,7 @@ export const MainPage = ({ cars }: { cars: ICard[] }) => {
             </div>
           </div>
           <div className={s.filterWrapper}>
-            <span>Объем двигателя</span>
+            <span className={s.filterTitle}>Объем двигателя</span>
             <div className={s.filters}>
               {mock_engines.map((engine) => (
                 <div
@@ -92,7 +92,7 @@ export const MainPage = ({ cars }: { cars: ICard[] }) => {
             </div>
           </div>
           <div className={s.filterWrapper}>
-            <span>Комплектация</span>
+            <span className={s.filterTitle}>Комплектация</span>
             <div className={s.filters}>
               {getComplectations(filters.brandName).map((complectation) => (
                 <div
@@ -112,13 +112,27 @@ export const MainPage = ({ cars }: { cars: ICard[] }) => {
             Сбросить фильтр
           </button>
         </div>
+        <div className={s.filtersMobileBlock}>
+          {mock_brands.map((brand) => (
+            <div
+              key={brand}
+              className={cn(
+                s.filter,
+                brand === filters.brandName && s.activeFilter
+              )}
+              onClick={() => setFilters({ brandName: brand })}
+            >
+              <span>{brand}</span>
+            </div>
+          ))}
+        </div>
         <div className={s.carsWrapper}>
           {carsToShow.length > 0 ? (
             carsToShow.map((car: ICard) => (
               <CarCard key={car.car_id} car={car} />
             ))
           ) : (
-            <span>Ничего не найдено</span>
+            <p className={s.notFound}>Ничего не найдено</p>
           )}
         </div>
       </div>
