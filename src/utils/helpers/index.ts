@@ -34,3 +34,7 @@ export const getComplectations = (brand: IBrand): string[] => {
   };
   return complectations[brand];
 };
+
+export function formatNumberWithSpaces(value: number) {
+  return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}

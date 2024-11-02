@@ -56,7 +56,7 @@ export const MainPage = ({ cars }: { cars: ICard[] }) => {
         Автомобили {filters.brandName ?? "Chery"} в СпБ
       </h1>
       <div className={s.wrapper}>
-        <div>
+        <div className={s.filtersContentWrapper}>
           <div className={s.filterWrapper}>
             <span>Бренд</span>
             <div className={s.filters}>

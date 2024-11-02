@@ -22,13 +22,20 @@
   gap: 60px;
 }
 
+.filtersContentWrapper {
+  width: 100%;
+  max-width: 500px;
+}
+
 .filterWrapper {
   display: flex;
+
   flex-direction: column;
   gap: 20px;
-  min-width: 500px;
+  width: 100%;
+  max-width: 500px;
   padding: 30px 0;
-  border-bottom: 2px solid #9AA7AD;
+  border-bottom: 2px solid var(--color-grey);
 
 
   & span {
@@ -40,7 +47,8 @@
 
 .resetFiltersBtn {
   margin: 40px 0;
-  min-width: 500px;
+  width: 100%;
+  max-width: 500px;
   height: 80px;
   border-radius: 8px;
   font-size: 28px;
@@ -75,7 +83,6 @@
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.8px;
-      color: var(--color-black);
       
     }
   }

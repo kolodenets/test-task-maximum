@@ -1,13 +1,17 @@
+"use client";
+
 import { ICard } from "@/src/types/car";
 import Image from "next/image";
 import s from "./CarCard.module.scss";
 import { convertEngineToString } from "@/src/utils/helpers";
+import { useRouter } from "next/navigation";
 
 interface ICarCard {
   car: ICard;
 }
 
 export const CarCard = ({ car }: ICarCard) => {
+  const router = useRouter();
   return (
     <div className={s.cardWrapper}>
       <div className={s.image}>
@@ -22,7 +26,9 @@ export const CarCard = ({ car }: ICarCard) => {
         {car.Transmission}
       </p>
 
-      <button>Подробнее</button>
+      <button onClick={() => router.push(`/${car.brandName}/${car.car_id}`)}>
+        Подробнее
+      </button>
     </div>
   );
 };
