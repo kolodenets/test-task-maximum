@@ -9,7 +9,7 @@
   line-height: 56px;
   margin: 100px 0 60px;
   letter-spacing: 1.2px;
-  font-family: var(--font-tactic-sans-bold);
+  font-weight: 600;
 
   @media screen and (max-width: 1000px) {
     font-size: 30px;
@@ -121,7 +121,7 @@
   border-bottom: 2px solid var(--color-grey);
 
   .filterTitle {
-    font-family: var(--font-tactic-sans-med);
+    font-weight: 500;
   }
 
   & span {
@@ -129,12 +129,10 @@
     line-height: 39px;
     letter-spacing: 0.56px;
 
-  
-
     @media screen and (max-width: 787px) {
       font-size: 20px;
       line-height: 28px;
-      letter-spacing: 0.40px;
+      letter-spacing: 0.4px;
     }
   }
 }
@@ -145,7 +143,7 @@
   max-width: 500px;
   height: 80px;
   border-radius: 8px;
-  font-family: var(--font-tactic-sans-med);
+  font-weight: 500;
   font-size: 28px;
   line-height: 34px;
   letter-spacing: 1.1px;
@@ -154,11 +152,11 @@
 
   @media screen and (max-width: 787px) {
     margin: 20px 0;
-    height:unset;
+    height: unset;
     min-height: 40px;
     font-size: 16px;
     line-height: 28px;
-    letter-spacing: 0.40px;
+    letter-spacing: 0.4px;
   }
 }
 
@@ -200,8 +198,6 @@
       }
     }
   }
-
- 
 }
 
 .carsWrapper {

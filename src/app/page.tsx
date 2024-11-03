@@ -1,8 +1,9 @@
 import { MainPage } from "../components/MainPage/MainPage";
+import { baseUrl } from "../utils/constants";
 
 export default async function Home() {
   const data = await fetch(
-    "https://test2.maximum-haval.ru/public/test-task/v1/brand/Chery"
+    `${baseUrl}Chery`
   );
   const cars = await data.json();
 
