@@ -9,7 +9,7 @@ import { IBrand, ICard, IComplectation, IEngine } from "@/src/types/car";
 import { mock_brands, mock_engines } from "@/src/utils/mocks";
 import { convertEngineToString, getComplectations } from "@/src/utils/helpers";
 import { baseUrl } from "@/src/utils/constants";
-import CarCard from "@/src/ui/carCard/CarCard";
+import CarCard from "@/src/ui/CarCard/CarCard";
 
 export interface IFilters {
   brandName: IBrand;
