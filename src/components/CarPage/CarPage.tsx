@@ -14,6 +14,7 @@ import {
 } from "@/src/utils/helpers";
 import { CustomSwiper } from "@/src/ui/CustomSwiper/CustomSwiper";
 import { useWindowDimensions } from "@/src/utils/hooks/useWindowDimensions";
+import Rubl from "../../../public/assets/rubl.svg";
 
 interface CarPageProps {
   car: ICard;
@@ -26,8 +27,10 @@ const CarPage: FC<CarPageProps> = ({ car }: CarPageProps) => {
   };
 
   const getBlockHeight = () => {
-    const size = sreenWidth * 0.435;
-    return Math.min(836, size);
+    if (sreenWidth > 870) {
+      const size = sreenWidth * 0.435;
+      return Math.min(836, size);
+    }
   };
 
   return (
@@ -41,7 +44,8 @@ const CarPage: FC<CarPageProps> = ({ car }: CarPageProps) => {
           <div className={s.info}>
             <div className={s.priceBlock}>
               <div className={s.smallGreyContainer}>
-                <p className={s.price}>{formatNumberWithSpaces(car.price)} ₽</p>
+                <p className={s.price}>{formatNumberWithSpaces(car.price)}</p>
+                <Image src={Rubl} alt="" />
               </div>
               <div className={s.smallGreyContainer}>
                 <Image src={WarrantyIcon} alt="" />
