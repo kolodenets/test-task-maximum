@@ -2,22 +2,26 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "normalize.css";
 import "../styles/global.scss";
-import Header from "../ui/Header/Header";
+import Header from "../ui/header/Header";
 
-const tacticSans = localFont({
-  src: "../styles/fonts/TacticSans-Reg.woff",
-  variable: "--font-tactic-sans",
-  weight: "400",
-});
-const tacticSansMed= localFont({
-  src: "../styles/fonts/TacticSans-Med.woff",
-  variable: "--font-tactic-sans-med",
-  weight: "500",
-});
-const tacticSansBold = localFont({
-  src: "../styles/fonts/TacticSans-Bld.woff",
-  variable: "--font-tactic-sans-bold",
-  weight: "600",
+const tacticSansFont = localFont({
+  src: [
+    {
+      path: "../styles/fonts/TacticSans-Reg.woff",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../styles/fonts/TacticSans-Med.woff",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../styles/fonts/TacticSans-Bld.woff",
+      weight: "600",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -32,7 +36,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${tacticSans.variable} ${tacticSansMed.variable} ${tacticSansBold.variable}`}>
+      <body
+        className={`${tacticSansFont.className}`}
+      >
         <Header />
         {children}
       </body>
