@@ -1,4 +1,4 @@
-import s from "./header.module.scss";
+import s from "./Header.module.scss";
 import Logo from "../../../public/assets/logo.svg";
 import Link from "next/link";
 

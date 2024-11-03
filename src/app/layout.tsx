@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "normalize.css";
 import "../styles/global.scss";
-import Header from "../ui/header/header";
+import Header from "../ui/Header/Header";
 
 const tacticSans = localFont({
   src: "../styles/fonts/TacticSans-Reg.woff",
