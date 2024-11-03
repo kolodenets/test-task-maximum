@@ -1,0 +1,233 @@
+.container {
+  margin: 0 auto;
+  max-width: 1522px;
+  padding: 0 20px 30px;
+}
+
+.title {
+  font-size: 40px;
+  line-height: 56px;
+  margin: 100px 0 60px;
+  letter-spacing: 1.2px;
+  font-family: var(--font-tactic-sans-bold);
+
+  @media screen and (max-width: 1000px) {
+    font-size: 30px;
+    line-height: 42px;
+    margin: 30px 0 30px;
+    letter-spacing: 0.6px;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 30px 0 10px;
+    letter-spacing: 0.6px;
+  }
+}
+.wrapper {
+  display: flex;
+  gap: 60px;
+
+  @media screen and (max-width: 787px) {
+    gap: 30px;
+  }
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.filtersMobileBlock {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  gap: 8px;
+
+  .filter {
+    width: fit-content;
+    display: flex;
+    padding: 4px 10px;
+    border-radius: 4px;
+    border: 1px solid #9aa7ad4d;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+
+    &.activeFilter {
+      border-color: var(--color-black);
+
+      span {
+        color: var(--color-black);
+      }
+
+      & + * {
+        border-color: #9aa7ad;
+        span {
+          color: #9aa7ad;
+        }
+      }
+    }
+
+    span {
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.4px;
+      color: #9aa7ad4d;
+      transition: all 0.5s ease-out;
+
+      @media screen and (max-width: 400px) {
+        font-size: 8%;
+        line-height: 12px;
+      }
+    }
+
+    &:has(+ *.activeFilter) {
+      border-color: #9aa7ad;
+
+      span {
+        color: #9aa7ad;
+      }
+    }
+  }
+  @media screen and (max-width: 400px) {
+    gap: 4px;
+  }
+  @media screen and (min-width: 601px) {
+    display: none;
+  }
+}
+
+.filtersContentWrapper {
+  width: 100%;
+  max-width: 500px;
+  min-width: 500px;
+
+  @media screen and (max-width: 1100px) {
+    min-width: unset;
+  }
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+
+.filterWrapper {
+  display: flex;
+
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  padding: 30px 0;
+  border-bottom: 2px solid var(--color-grey);
+
+  .filterTitle {
+    font-family: var(--font-tactic-sans-med);
+  }
+
+  & span {
+    font-size: 28px;
+    line-height: 39px;
+    letter-spacing: 0.56px;
+
+  
+
+    @media screen and (max-width: 787px) {
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 0.40px;
+    }
+  }
+}
+
+.resetFiltersBtn {
+  margin: 40px 0;
+  width: 100%;
+  max-width: 500px;
+  height: 80px;
+  border-radius: 8px;
+  font-family: var(--font-tactic-sans-med);
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 1.1px;
+  border: 2px solid var(--color-black);
+  cursor: pointer;
+
+  @media screen and (max-width: 787px) {
+    margin: 20px 0;
+    height:unset;
+    min-height: 40px;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.40px;
+  }
+}
+
+.filters {
+  display: flex;
+  max-width: 440px;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .filter {
+    height: 40px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 8px;
+    border: 2px solid var(--color-black);
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+
+    &.activeFilter {
+      background-color: #a9a9a9;
+    }
+
+    & span {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.8px;
+    }
+
+    @media screen and (max-width: 787px) {
+      height: 30px;
+      padding: 0 10px;
+
+      span {
+        font-size: 12px;
+        line-height: 18px;
+        letter-spacing: 0.8px;
+      }
+    }
+  }
+
+ 
+}
+
+.carsWrapper {
+  display: flex;
+  gap: 40px 42px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &:not(:has(img)) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 1100px) {
+    width: fit-content;
+  }
+  @media screen and (max-width: 600px) {
+    padding-top: 30px;
+    gap: 30px;
+  }
+
+  .notFound {
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+    color: var(--color-black);
+    text-align: center;
+  }
+}

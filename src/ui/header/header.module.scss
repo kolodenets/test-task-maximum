@@ -1,0 +1,49 @@
+.header {
+  height: 108px;
+  background-color: #010c13;
+  padding: 20px;
+
+  @media screen and (max-width: 768px) {
+    height: 54px;
+    padding: 9px 20px 15px;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  max-width: 1482px;
+  margin: 0 auto;
+  align-items: center;
+  gap: 20px;
+}
+
+.divider {
+  width: 2px;
+  height: 68px;
+  background-color: #fff;
+
+  @media screen and (max-width: 768px) {
+    width: 2px;
+    height: 25px;
+  }
+}
+
+.logo {
+  width: 154px;
+  height: 42px;
+  @media screen and (max-width: 768px) {
+    width: 111px;
+    height: 30px;
+  }
+}
+
+.logoTitle {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 5%;
+  color: #fff;
+
+  @media screen and (max-width: 768px) {
+    font-size: 10px;
+  }
+}
